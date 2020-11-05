@@ -7,8 +7,8 @@ cookies: str
 headers: str
 
 session = requests.session()
-cookies = session.get('https://www.lenovo.com/de/de/pc/')
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0'}
+cookies = session.get()
+headers = {}
 
 response = session.get(pathname, headers=headers, cookies=cookies)
 soup = BeautifulSoup(response.text, 'html.parser')
